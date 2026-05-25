@@ -20,7 +20,7 @@ body {
 
 .todo-container {
   width: min(90%, 500px);
-  background: #F4E9D7;
+  background:#F4E9D7;
   padding: 30px;
   border-radius: 20px;
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
@@ -37,19 +37,19 @@ body {
 
 .input-section {
   display: flex;
-  gap: 0px;
+  gap: 10px;
   margin-bottom: 25px;
+  width: 100%;
 }
 
 .input-section input {
   flex: 1;
+  min-width: 0;
   padding: 14px;
   border: 2px solid #e5e7eb;
   border-radius: 12px;
   outline: none;
-  font-family: "Special Elite", system-ui;
-  font-weight: 400;
-  font-style: normal;
+  font-size: 16px;
   transition: 0.3s;
 }
 
@@ -60,11 +60,11 @@ body {
 .input-section button {
   padding: 14px 20px;
   border: none;
-  background: #364b6e;
+  background: #3b82f6;
   color: white;
   border-radius: 12px;
   cursor: pointer;
-  font-size: 15px;
+  white-space: nowrap;
   transition: 0.3s;
 }
 
@@ -85,7 +85,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 15px;
   transition: 0.3s;
+  width: 100%;
+  overflow: hidden;
 }
 
 .task-card:hover {
@@ -94,6 +97,11 @@ body {
 }
 
 .task-card p {
+  flex: 1;
+
+  word-break: break-word;
+  overflow-wrap: break-word;
+
   color: #111827;
   font-size: 16px;
 }
@@ -118,44 +126,30 @@ body {
   margin-top: 10px;
 }
 
-@media (max-width: 480px) {
-  * {
-   transition: all 0.3s ease;
+@media (max-width: 600px) {
+
+  body {
+    overflow-x: hidden;
   }
 
- body {
-   padding: 20px;
-  }
-
-  .todo-container {
-    padding: 20px;
-    border-radius: 15px;
-  }
-
-  .todo-container h1 {
-    font-size: 24px;
+  .input-section {
+    flex-direction: column;
   }
 
   .input-section input {
-    padding: 12px;
-    font-size: 16px;
+    width: 100%;
   }
 
   .input-section button {
-    padding: 12px;
-    font-size: 14px;
+    width: 100%;
   }
 
   .task-card {
-    padding: 15px;
-  }
-
-  .task-card p {
-    font-size: 14px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .task-card button {
-    padding: 10px;
-    font-size: 14px;
+    width: 100%;
   }
 }
