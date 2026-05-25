@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #f5e6d3, #FFB090);
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.todo-container {
+  width: min(90%, 500px);
+  background: #F4E9D7;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.todo-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #111827;
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.input-section {
+  display: flex;
+  gap: 0px;
+  margin-bottom: 25px;
+}
+
+.input-section input {
+  flex: 1;
+  padding: 14px;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  outline: none;
+  font-family: "Special Elite", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  transition: 0.3s;
+}
+
+.input-section input:focus {
+  border-color: #3e4d64;
+}
+
+.input-section button {
+  padding: 14px 20px;
+  border: none;
+  background: #364b6e;
+  color: white;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.input-section button:hover {
+  background: rgb(74, 87, 131);
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-card {
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.task-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.task-card p {
+  color: #111827;
+  font-size: 16px;
+}
+
+.task-card button {
+  background: #E06B80;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.task-card button:hover {
+  background: #dc2626;
+}
+
+.empty {
+  text-align: center;
+  color: #6b7280;
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  * {
+   transition: all 0.3s ease;
+  }
+
+ body {
+   padding: 20px;
+  }
+
+  .todo-container {
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .todo-container h1 {
+    font-size: 24px;
+  }
+
+  .input-section input {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .input-section button {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .task-card {
+    padding: 15px;
+  }
+
+  .task-card p {
+    font-size: 14px;
+  }
+
+  .task-card button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
